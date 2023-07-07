@@ -13,11 +13,10 @@ function App() {
         <h1>Galleries</h1>
         <GalleryNavigation galleries={harvardArt} />
       </header>
-      <Router> 
-            <Route path="/galleries/:galleryId"> 
-                <GalleryView/> 
-            </Route>
-      </Router>
+      
+      <Route path="/galleries/:galleryId">
+          <GalleryView galleries={harvardArt} /> 
+      </Route>
     </div>
 
   );
