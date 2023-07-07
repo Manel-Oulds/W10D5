@@ -4,6 +4,7 @@ import harvardArt from './data/harvardArt';
 import GalleryNavigation from './components/GalleryNavigation';
 import GalleryView from './components/GalleryView';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import ArtImageTile from './components/ArtImageTile';
 
 
 function App() {
@@ -15,6 +16,10 @@ function App() {
       </header>
       
     <Switch>
+
+              <Route path ="/galleries/:galleryId/art/:artId">
+                <h2>Art Image</h2>
+              </Route>
               <Route path="/galleries/:galleryId">
                   <GalleryView galleries={harvardArt} /> 
               </Route> 
